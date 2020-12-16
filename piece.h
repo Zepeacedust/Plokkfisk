@@ -4,11 +4,14 @@
 class Piece 
 {
 public:
+
+	char display;
 	int value;
 	///<synopsis>
 	///true = white, false = black
 	///</synopsis>
 	bool player;
-	std::vector<MoveVector> moveVectors;
+	Piece();
 	Piece(char pieceName);
+	std::vector<MoveVector> moveVectors;
 };

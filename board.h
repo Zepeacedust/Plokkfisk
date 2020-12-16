@@ -1,10 +1,15 @@
 #pragma once
 #include "piece.h"
-
+#include "move.h"
 class Board
 {
-	char[8, 8] pieceMap;
-	Piece[32] pieces;
+public:
+	bool activePlayer;
+	bool kingsideCastle;
+	bool queensideCastle;
+	Piece* pieceMap[8][8] = {};
+	Piece pieces[64];
 	Board();
-	std::vector<Move> findMoves()
+	std::vector<Move> findMoves();
+	void display();
 };

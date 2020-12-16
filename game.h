@@ -4,6 +4,6 @@
 
 class Game
 {
-	Board board;
-	//queue moves
+	Piece* board[8][8];
+	std::vector<Move> moves;
 };
